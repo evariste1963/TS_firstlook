@@ -2,12 +2,13 @@ async function hello() {
     return 'world';
 }
 let lucky = 20; //implicit type
-let luckier = 23; // opting out ot type
+let luckier = 23; // opting out of strict type
 luckier = 'some text';
 let luckiest; // inferred as any type
 let luckinow; //explicit type 
 luckinow = 20;
 let font;
+font = 'giraffe';
 font = 'italic';
 const person = {
     first: 'jeff',
@@ -21,7 +22,8 @@ const person2 = {
 function pow(x, y) {
     return Math.pow(x, y);
 }
-//pow(23,'foo')
+pow(23, 'foo');
+//pow(23, 2)
 function pow1(x, y) {
     return Math.pow(x, y);
 }

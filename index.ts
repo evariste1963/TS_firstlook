@@ -8,7 +8,7 @@ async function hello(){
 
 let lucky = 20  //implicit type
 
-let luckier: any = 23  // opting out ot type
+let luckier: any = 23  // opting out of strict type
 
 luckier = 'some text'
 
@@ -23,9 +23,10 @@ type Style = 'bold' | 'italic' | 23;
 
 let font: Style;
 
+font = 'giraffe'
 font = 'italic'
 
-//enforcing types
+//enforcing types to objects etc
 
 interface Person{
     first:string,
@@ -48,7 +49,8 @@ function pow(x,y){
     return Math.pow(x,y)
 }
 
-//pow(23,'foo')
+pow(23,'foo')
+//pow(23, 2)
 
 function pow1(x:number,y:number){
     return Math.pow(x,y)
